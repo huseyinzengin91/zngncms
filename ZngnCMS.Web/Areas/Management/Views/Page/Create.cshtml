@@ -1,0 +1,76 @@
+﻿@model ZngnCMS.Model.Page.PageCreateModel
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Sayfa Ekle</h1>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Sayfa Ekle
+            </div>
+
+            <div class="row">
+                @Html.Alert(Model.Alerts)
+            </div>
+
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <form method="post">
+                            <div class="form-group">
+                                <label>Dil</label>
+                                @Html.DropDownList("LanguageID", Model.LanguageList, new { @class = "form-control", @onchange = "refresh();" })
+                            </div>
+
+                            <div class="form-group">
+                                <label>Başlık</label>
+                                @Html.TextBoxFor(z => z.Name, new { @class = "form-control" })
+                                <p class="help-block">Sayfa adı</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Açıklama</label>
+                                @Html.TextBoxFor(z => z.SeoDescription, new { @class = "form-control" })
+                                <p class="help-block">Seo açıklaması</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Anahtar Kelimeler</label>
+                                @Html.TextBoxFor(z => z.SeoKeyword, new { @class = "form-control" })
+                                <p class="help-block">Seo anahtar kelimeleri</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Seo Adı</label>
+                                @Html.TextBoxFor(z => z.SeoName, new { @class = "form-control" })
+                                <p class="help-block">Seo adı</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Sayfa içeriği</label>
+                                @Html.TextBoxFor(z => z.Text, new { @class = "form-control" })
+                                <p class="help-block">Sayfa içeriği</p>
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn-default">Kaydet</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

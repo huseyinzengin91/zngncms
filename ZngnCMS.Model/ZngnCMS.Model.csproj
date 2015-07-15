@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C932E50-0537-4DEC-8E60-4DD8833E7600}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZngnCMS.Model</RootNamespace>
+    <AssemblyName>ZngnCMS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Article\ArticleCreateModel.cs" />
+    <Compile Include="Article\ArticleDeleteModel.cs" />
+    <Compile Include="Article\ArticleEditModel.cs" />
+    <Compile Include="Article\ArticleIndexModel.cs" />
+    <Compile Include="Article\ArticleItemModel.cs" />
+    <Compile Include="Authorization\LoginModel.cs" />
+    <Compile Include="Authorization\Resources\LoginModelResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginModelResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Authorization\SessionModel.cs" />
+    <Compile Include="Base\BaseModel.cs" />
+    <Compile Include="CustomFilterAttribute.cs" />
+    <Compile Include="Language\LanguageCreateModel.cs" />
+    <Compile Include="Language\LanguageIndexModel.cs" />
+    <Compile Include="Language\LanguageItemModel.cs" />
+    <Compile Include="Menu\MenuCreateModel.cs" />
+    <Compile Include="Menu\MenuDeleteModel.cs" />
+    <Compile Include="Menu\MenuIndexModel.cs" />
+    <Compile Include="Menu\MenuItemModel.cs" />
+    <Compile Include="Menu\MenuTranslationItemModel.cs" />
+    <Compile Include="Page\PageCreateModel.cs" />
+    <Compile Include="Page\PageDeleteModel.cs" />
+    <Compile Include="Page\PageEditModel.cs" />
+    <Compile Include="Page\PageIndexModel.cs" />
+    <Compile Include="Page\PageItemModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteSetting\SiteSettingIndexModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Authorization\Resources\LoginModelResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginModelResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\huseyin\Desktop\deneme</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Management/Assets/css/bootstrap.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/css/bootstrap.min.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/css/plugins/dataTables/dataTables.bootstrap.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/css/plugins/morris/morris-0.4.3.min.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/css/plugins/social-buttons/social-buttons.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/css/plugins/timeline/timeline.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/css/sb-admin.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/css/font-awesome.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/css/font-awesome.min.css">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/fonts/fontawesome-webfont.eot">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/fonts/fontawesome-webfont.svg">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/fonts/fontawesome-webfont.ttf">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/fonts/fontawesome-webfont.woff">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/fonts/FontAwesome.otf">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/bordered-pulled.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/core.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/fixed-width.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/font-awesome.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/icons.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/larger.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/list.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/mixins.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/path.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/rotated-flipped.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/spinning.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/stacked.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/less/variables.less">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/font-awesome.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_bordered-pulled.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_core.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_fixed-width.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_icons.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_larger.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_list.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_mixins.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_path.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_rotated-flipped.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_spinning.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_stacked.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/font-awesome/scss/_variables.scss">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/bootstrap.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/bootstrap.min.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/demo/dashboard-demo.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/demo/flot-demo.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/demo/morris-demo.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/jquery-1.10.2.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/dataTables/dataTables.bootstrap.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/dataTables/jquery.dataTables.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/flot/excanvas.min.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/flot/jquery.flot.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/flot/jquery.flot.pie.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/flot/jquery.flot.resize.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/flot/jquery.flot.tooltip.min.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/metisMenu/jquery.metisMenu.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/morris/morris.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/plugins/morris/raphael-2.1.0.min.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Assets/js/sb-admin.js">
+      <publishTime>06/29/2015 21:27:14</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/Display/LeftMenu.cshtml">
+      <publishTime>07/02/2015 04:02:05</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/Display/TopMenu.cshtml">
+      <publishTime>07/01/2015 16:27:54</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/Home/Index.cshtml">
+      <publishTime>07/02/2015 04:03:43</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/Language/Create.cshtml">
+      <publishTime>07/02/2015 06:51:44</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/Language/Index.cshtml">
+      <publishTime>07/02/2015 05:48:46</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/Login/Index.cshtml">
+      <publishTime>07/02/2015 06:43:10</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/PageSetting/Index.cshtml">
+      <publishTime>07/01/2015 16:33:56</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/Shared/_ManagementLayout.cshtml">
+      <publishTime>07/02/2015 04:13:15</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/SiteSetting/Index.cshtml">
+      <publishTime>07/02/2015 04:28:16</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/web.config">
+      <publishTime>06/29/2015 21:20:19</publishTime>
+    </File>
+    <File Include="Areas/Management/Views/_ViewStart.cshtml">
+      <publishTime>06/29/2015 21:35:03</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>06/29/2015 21:07:43</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>06/27/2015 23:01:55</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>06/27/2015 23:01:55</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/29/2015 21:07:43</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>06/29/2015 21:07:43</publishTime>
+    </File>
+    <File Include="bin/ZngnCMS.Business.dll">
+      <publishTime>07/02/2015 10:01:25</publishTime>
+    </File>
+    <File Include="bin/ZngnCMS.Entities.dll">
+      <publishTime>07/02/2015 09:56:17</publishTime>
+    </File>
+    <File Include="bin/ZngnCMS.Model.dll">
+      <publishTime>07/02/2015 10:01:25</publishTime>
+    </File>
+    <File Include="bin/ZngnCMS.ModelFactory.dll">
+      <publishTime>07/02/2015 10:01:25</publishTime>
+    </File>
+    <File Include="bin/ZngnCMS.Web.dll">
+      <publishTime>07/02/2015 10:01:26</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/29/2015 21:07:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>06/29/2015 21:07:40</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>06/29/2015 21:07:42</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>06/29/2015 21:07:43</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>06/29/2015 21:07:43</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>06/29/2015 21:27:15</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>06/29/2015 21:07:39</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/02/2015 10:00:50</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
