@@ -1,19 +1,18 @@
 ﻿namespace ZngnCMS.Business
 {
     #region Using
+
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.Transactions;
     using ZngnCMS.Entities;
 
-    #endregion
+    #endregion Using
 
     public class MenuBusiness
     {
-        ModelContext context;
+        private ModelContext context;
 
         public MenuBusiness()
         {
@@ -22,7 +21,6 @@
                 context = new ModelContext();
             }
         }
-
 
         public List<Menu> GetMenuList()
         {
@@ -80,7 +78,6 @@
                 }
                 catch (Exception ex)
                 {
-
                     throw ex;
                 }
             }
@@ -127,11 +124,9 @@
                 }
                 catch (Exception ex)
                 {
-
                     throw ex;
                 }
             }
-
         }
 
         private List<Menu> GetSubMenuByTopMenuID(List<Menu> subMenuList, long topMenuID)
@@ -140,6 +135,5 @@
 
             return tmpSubMenuList;
         }
-
     }
 }

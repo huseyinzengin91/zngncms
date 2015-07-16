@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using ZngnCMS.Constants;
-using ZngnCMS.Entities;
-
-namespace ZngnCMS.Business
+﻿namespace ZngnCMS.Business
 {
+    #region Using
+
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Transactions;
+    using ZngnCMS.Constants;
+    using ZngnCMS.Entities;
+
+    #endregion Using
+
     public class PageBusiness
     {
-        ModelContext context;
+        private ModelContext context;
 
         public PageBusiness()
         {
@@ -60,7 +62,6 @@ namespace ZngnCMS.Business
                 {
                     throw ex;
                 }
-
             }
 
             return pageTranslation;
@@ -101,7 +102,6 @@ namespace ZngnCMS.Business
                 {
                     throw ex;
                 }
-
             }
 
             return pageTranslation;
@@ -136,7 +136,6 @@ namespace ZngnCMS.Business
                 {
                     throw ex;
                 }
-
             }
 
             return pageTranslation;
@@ -159,7 +158,7 @@ namespace ZngnCMS.Business
             }
             else
             {
-                existSeoName = context.PageTranslation.Any(z => z.SeoName.Equals(seoName)); 
+                existSeoName = context.PageTranslation.Any(z => z.SeoName.Equals(seoName));
             }
 
             return existSeoName;
@@ -172,7 +171,6 @@ namespace ZngnCMS.Business
             existPage = context.Page.Any(z => z.ID == pageID);
 
             return existPage;
-
         }
 
         public List<Page> PageList(int page)
@@ -196,7 +194,6 @@ namespace ZngnCMS.Business
             long? pageTranslationID = pageTranslation != null ? pageTranslation.ID : new Nullable<long>();
 
             return pageTranslationID;
-
         }
 
         public IEnumerable<PageTranslation> GetPageTranslationListByPageID(long pageID)

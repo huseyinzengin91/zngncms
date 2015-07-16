@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ZngnCMS.Constants;
-using ZngnCMS.Entities;
-
-namespace ZngnCMS.Business
+﻿namespace ZngnCMS.Business
 {
+    #region Using
+
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using ZngnCMS.Constants;
+    using ZngnCMS.Entities;
+
+    #endregion Using
+
     public class LanguageBusiness
     {
+        private ModelContext context;
 
-        ModelContext context;
-        
         public LanguageBusiness()
         {
             if (context == null)
@@ -36,14 +37,12 @@ namespace ZngnCMS.Business
             context.Language.Add(language);
             context.SaveChanges();
 
-
             return language;
         }
 
         public List<Language> LanguageList(int page)
         {
-            List<Language> languageList = context.Language.OrderByDescending(z=>z.ID).Skip(CommonConstans.PageCount * (page - 1)).Take(CommonConstans.PageCount).ToList();
-
+            List<Language> languageList = context.Language.OrderByDescending(z => z.ID).Skip(CommonConstans.PageCount * (page - 1)).Take(CommonConstans.PageCount).ToList();
 
             return languageList;
         }

@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using ZngnCMS.Entities;
-using ZngnCMS.Model.SiteSetting;
-
-
-namespace ZngnCMS.Business
+﻿namespace ZngnCMS.Business
 {
+    #region Using
+
+    using System;
+    using System.Linq;
+    using System.Transactions;
+    using ZngnCMS.Entities;
+
+    #endregion Using
+
     public class SiteSettingBusiness
     {
-        ModelContext context;
+        private ModelContext context;
 
         public SiteSettingBusiness()
         {
@@ -67,7 +66,6 @@ namespace ZngnCMS.Business
 
             siteSetting.UpdatedDate = date;
 
-
             using (TransactionScope scope = new TransactionScope())
             {
                 try
@@ -79,11 +77,9 @@ namespace ZngnCMS.Business
                 {
                     throw ex;
                 }
-
             }
 
             return siteSettingTranslation;
-
         }
 
         public SiteSettingTranslation UpdateSiteSettingTranslation(long languageID, long siteSettingID, string title, string description, string keyword, string footerText, string email, string emailPassword, string emailPort)
@@ -118,11 +114,9 @@ namespace ZngnCMS.Business
                 {
                     throw ex;
                 }
-
             }
 
             return siteSettingTranslation;
-
         }
     }
 }

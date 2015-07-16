@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ZngnCMS.Entities;
-using ZngnCMS.Model.Authorization;
-
-namespace ZngnCMS.Business
+﻿namespace ZngnCMS.Business
 {
+    #region Using
+
+    using System.Linq;
+    using ZngnCMS.Entities;
+
+    #endregion Using
+
     public class UserBusiness
     {
-        ModelContext context;
+        private ModelContext context;
 
         public UserBusiness()
         {
