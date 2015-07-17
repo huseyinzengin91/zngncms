@@ -7,6 +7,7 @@
     using System.Linq;
     using System.Transactions;
     using ZngnCMS.Entities;
+    using ZngnCMS.Model.Common;
 
     #endregion Using
 
@@ -135,5 +136,47 @@
 
             return tmpSubMenuList;
         }
+
+        public List<SelectListItemModel> MenuSelectListByLanguageID(long languageID)
+        {
+            List<MenuTranslation> menuTranslationList = context.MenuTranslation.Where(z => z.LanguageID == languageID).ToList();
+
+            List<MenuTranslation> mainMenu = menuTranslationList.Where(z => z.Menu.TopMenu == null).OrderBy(z=>z.Sort).ToList();
+
+            List<SelectListItemModel> menuList = new List<SelectListItemModel>();
+
+            foreach (var item in mainMenu)
+            {
+                menuList.Add(new SelectListItemModel
+                {
+                    Value = item.MenuID.ToString(),
+                    Text = item.Name
+                });
+
+                AppendSubMenu(menuTranslationList, menuList, item.MenuID);
+            }
+
+            return menuList;
+        }
+
+        public void AppendSubMenu(List<MenuTranslation> menuTranslationList, List<SelectListItemModel> menuList, long topMenuID)
+        {
+            List<MenuTranslation> subMenuList = menuTranslationList.Where(z => z.Menu.TopMenu.HasValue && z.Menu.TopMenu.Value == topMenuID).ToList();
+
+            if (subMenuList != null && subMenuList.Any())
+            {
+                foreach (var item in subMenuList)
+                {
+                    menuList.Add(new SelectListItemModel
+                    {
+                        Value = item.MenuID.ToString(),
+                        Text = item.Name
+                    });
+
+                    AppendSubMenu(menuTranslationList, menuList, item.MenuID);
+                }
+            }
+        }
     }
+
 }

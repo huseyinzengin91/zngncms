@@ -7,16 +7,29 @@
     using System.Web.Mvc;
     using ZngnCMS.Business;
     using ZngnCMS.Entities;
+    using ZngnCMS.Model.Common;
     using ZngnCMS.Model.Menu;
     #endregion
 
     public class MenuModelFactory
     {
-        public MenuIndexModel LoadIndex(long languageID)
+        public MenuIndexModel LoadIndex(long? languageID)
         {
             MenuBusiness menuBusiness = new MenuBusiness();
+            LanguageBusiness languageBusiness = new LanguageBusiness();
 
             MenuIndexModel menuIndexModel = new MenuIndexModel();
+
+            long defaultLanguageID = languageBusiness.GetFirstLanguage();
+
+            if (!languageID.HasValue)
+            {
+                languageID = defaultLanguageID;
+            }
+
+            IEnumerable<Language> languageList = languageBusiness.LanguageList();
+
+            menuIndexModel.LanguageList = new SelectList(languageList, "ID", "Name", languageID);
 
             List<Menu> menu = menuBusiness.GetMenuList();
 
@@ -35,10 +48,22 @@
                 {
                     MenuTranslation menuTranslation = _menuTranslation.FirstOrDefault(z => z.LanguageID == languageID);
 
-                    tmpItem.LanguageID = menuTranslation.LanguageID;
-                    tmpItem.Name = menuTranslation.Name;
-                    tmpItem.Sort = menuTranslation.Sort;
-                    tmpItem.URL = menuTranslation.URL;
+                    if (menuTranslation != null)
+                    {
+                        tmpItem.LanguageID = menuTranslation.LanguageID;
+                        tmpItem.Name = menuTranslation.Name;
+                        tmpItem.Sort = menuTranslation.Sort;
+                        tmpItem.URL = menuTranslation.URL;
+                    }
+                    else
+                    {
+                        MenuTranslation defaultMenuTranslation = _menuTranslation.FirstOrDefault(z => z.LanguageID == defaultLanguageID);
+
+                        tmpItem.LanguageID = defaultMenuTranslation.LanguageID;
+                        tmpItem.Name = string.Format("Çeviri eklenmemiş , ({0})", defaultMenuTranslation.Name);
+                        tmpItem.Sort = defaultMenuTranslation.Sort;
+                        tmpItem.URL = defaultMenuTranslation.URL;
+                    }
                 }
 
                 menuItemList.Add(tmpItem);
@@ -49,26 +74,46 @@
             return menuIndexModel;
         }
 
-        public MenuCreateModel LoadCreate()
+        public MenuCreateModel LoadCreate(long? languageID)
         {
             LanguageBusiness languageBusiness = new LanguageBusiness();
 
             MenuCreateModel menuCreateModel = new MenuCreateModel();
+            MenuBusiness menuBusiness = new MenuBusiness();
 
             IEnumerable<Language> languageList = languageBusiness.LanguageList();
 
+            long defaultLanguageID = languageBusiness.GetFirstLanguage();
+
+            if (!languageID.HasValue)
+            {
+                languageID = defaultLanguageID;
+            }
+
             menuCreateModel.LanguageList = new SelectList(languageList, "ID", "Name");
+
+            List<SelectListItemModel> menuList = new List<SelectListItemModel>();
+
+            menuList.Add(new SelectListItemModel
+            {
+                Text = "Ana menü",
+                Value = null
+            });
+
+            menuList.AddRange(menuBusiness.MenuSelectListByLanguageID(languageID.Value));
+
+            menuCreateModel.MenuList = new SelectList(menuList, "Value", "Text");
 
             return menuCreateModel;
         }
 
         public MenuCreateModel CreateMenu(MenuCreateModel request)
         {
-            MenuCreateModel menuCreateModel = new MenuCreateModel();
-
             LanguageBusiness languageBusiness = new LanguageBusiness();
             MenuBusiness menuBusiness = new MenuBusiness();
 
+            MenuCreateModel menuCreateModel = new MenuCreateModel();
+            
             IEnumerable<Language> languageList = languageBusiness.LanguageList();
 
             menuCreateModel.LanguageList = new SelectList(languageList, "ID", "Name", request.LanguageID);
@@ -110,7 +155,7 @@
         public MenuDeleteModel DeleteMenu(long menuID)
         {
             MenuBusiness menuBusiness = new MenuBusiness();
-            
+
             MenuDeleteModel menuDeleteModel = new MenuDeleteModel();
 
             try

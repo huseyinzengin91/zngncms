@@ -49,9 +49,10 @@
 
                             <div class="form-group">
                                 <label>Menü bağı</label>
-                                @Html.TextBoxFor(z => z.TopMenu, new { @class = "form-control" })
-                                <p class="help-block">Menü bağı seçeneğiyle alt menü eklenebilir</p>
+                                @Html.DropDownList("TopMenu", Model.MenuList, new { @class = "form-control" })
                             </div>
+
+                            <p class="help-block">Menü bağı seçeneğiyle alt menü eklenebilir</p>
 
                             <button type="submit" class="btn btn-default">Kaydet</button>
 

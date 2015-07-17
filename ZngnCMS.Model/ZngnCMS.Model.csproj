@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Authorization\SessionModel.cs" />
     <Compile Include="Base\BaseModel.cs" />
+    <Compile Include="Common\SelectListItemModel.cs" />
     <Compile Include="CustomFilterAttribute.cs" />
     <Compile Include="Language\LanguageCreateModel.cs" />
     <Compile Include="Language\LanguageIndexModel.cs" />

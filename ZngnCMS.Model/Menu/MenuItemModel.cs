@@ -20,6 +20,5 @@ namespace ZngnCMS.Model.Menu
 
         public long? TopMenu { get; set; }
 
-        //public List<MenuTranslationItemModel> MenuTranslation { get; set; }
     }
 }

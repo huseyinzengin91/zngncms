@@ -11,18 +11,18 @@
     public class MenuController : BaseController
     {
         #region Get
-        public ActionResult Index()
+        public ActionResult Index(long? languageID)
         {
             MenuModelFactory menuModelFactory = new MenuModelFactory();
-            MenuIndexModel model = menuModelFactory.LoadIndex(1);
+            MenuIndexModel model = menuModelFactory.LoadIndex(languageID);
 
             return CheckViewModel(model);
         }
 
-        public ActionResult Create()
+        public ActionResult Create(long? languageID)
         {
             MenuModelFactory menuModelFactory = new MenuModelFactory();
-            MenuCreateModel model = menuModelFactory.LoadCreate();
+            MenuCreateModel model = menuModelFactory.LoadCreate(languageID);
 
             return View(model);
         }
@@ -41,7 +41,7 @@
         public ActionResult Create(MenuCreateModel request)
         {
             MenuModelFactory menuModelFactory = new MenuModelFactory();
-            MenuCreateModel model = ModelState.IsValid ? menuModelFactory.CreateMenu(request) : menuModelFactory.LoadCreate();
+            MenuCreateModel model = ModelState.IsValid ? menuModelFactory.CreateMenu(request) : menuModelFactory.LoadCreate(request.LanguageID);
 
             return CheckViewModel(model);
         }

@@ -60,5 +60,12 @@
 
             return existLanguage;
         }
+
+        public long GetFirstLanguage()
+        {
+            long languageID = context.Language.FirstOrDefault().ID;
+
+            return languageID;
+        }
     }
 }
